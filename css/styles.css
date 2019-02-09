@@ -1,5 +1,5 @@
 body {
-  font: 16px;
+  font-size: 16px;
   font-family: Verdana, sans-serif;
 }
 
@@ -26,4 +26,14 @@ body {
   font-size: 12px;
   cursor: pointer;
   color: #08c;
+}
+
+#app ul {
+  padding: 0;
+  list-style: none;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+  color: #bbb;
 }
