@@ -25,12 +25,14 @@
       <input type="text" v-model="newItem">
       <input type="submit" value="Add">
     </form>
+  </div>
 
-    <div id="like">
-      <like-component></like-component>
-      <like-component></like-component>
-      <like-component></like-component>
-    </div>
+  <div id="like" class="container">
+    <p>Total Likes: {{ total }}</p>
+    <like-component message="Like" @increment="incrementTotal"></like-component>
+    <like-component message="Awesome" @increment="incrementTotal"></like-component>
+    <like-component message="Great" @increment="incrementTotal"></like-component>
+    <like-component @increment="incrementTotal"></like-component>
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
