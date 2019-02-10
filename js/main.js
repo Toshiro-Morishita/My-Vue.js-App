@@ -52,4 +52,27 @@
       }
     }
   });
+
+  // component
+
+  let likeComponent = Vue.extend({
+    data: function() {
+      return {
+        count: 0
+      }
+    },
+    template: '<button @click="countUp">Like {{ count }}</button>',
+    methods: {
+      countUp: function() {
+        this.count++;
+      }
+    }
+  });
+
+  let app = new Vue({
+    el: '#like',
+    components: {
+      'like-component': likeComponent
+    }
+  });
 })();
